@@ -1,0 +1,10 @@
+[
+  {
+    "id": "REQ-0001",
+    "title": "Execute full Aether re-engineering mission per attached vision doc: 10 phases (audit, feature matrix, baselines, algorithm review, prototypes, implementation, security verification, binary optimization, competitive benchmarks, final audit) to bring Aether to production-ready state competing with Axum/Actix",
+    "description": "",
+    "created_at": "2026-10-18T17:11:49Z",
+    "status": "open",
+    "type": "requirement"
+  }
+]

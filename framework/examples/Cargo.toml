@@ -1,0 +1,24 @@
+[package]
+name = "aether-examples"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+aether = { path = "../aether" }
+tokio.workspace = true
+bytes.workspace = true
+serde.workspace = true
+serde_json = "1.0"
+
+[[bin]]
+name = "basic_api"
+path = "basic_api.rs"
+
+[[bin]]
+name = "full_async_api"
+path = "full_async_api.rs"
+
+[[bin]]
+name = "scheduling_demo"
+path = "scheduling_demo.rs"

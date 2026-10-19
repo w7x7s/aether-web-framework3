@@ -1,0 +1,22 @@
+run1 Aether /plaintext rps=   22259 p50=1.146 p99=5.207 fail=0 cpu=283.8% ram=7MB
+run1 Actix  /plaintext rps=   25616 p50=0.624 p99=7.588 fail=0 cpu=283.4% ram=8MB
+run1 Aether /json      rps=   25891 p50=1.023 p99=4.059 fail=0 cpu=326.5% ram=7MB
+run1 Actix  /json      rps=   24375 p50=0.659 p99=5.411 fail=0 cpu=273.1% ram=8MB
+run2 Aether /plaintext rps=   26966 p50=0.973 p99=3.936 fail=0 cpu=315.2% ram=7MB
+run2 Actix  /plaintext rps=   28928 p50=0.693 p99=4.701 fail=0 cpu=325.4% ram=8MB
+run2 Aether /json      rps=   28042 p50=0.978 p99=3.431 fail=0 cpu=321.2% ram=7MB
+run2 Actix  /json      rps=   21983 p50=0.626 p99=7.107 fail=0 cpu=244.6% ram=8MB
+run3 Aether /plaintext rps=   24077 p50=1.113 p99=4.377 fail=0 cpu=293.4% ram=7MB
+run3 Actix  /plaintext rps=   28601 p50=0.670 p99=4.980 fail=0 cpu=299.0% ram=8MB
+run3 Aether /json      rps=   34670 p50=0.711 p99=3.462 fail=0 cpu=339.7% ram=7MB
+run3 Actix  /json      rps=   25209 p50=0.601 p99=5.080 fail=0 cpu=280.8% ram=8MB
+run4 Aether /plaintext rps=   25804 p50=0.987 p99=4.302 fail=0 cpu=311.7% ram=7MB
+run4 Actix  /plaintext rps=   26719 p50=0.608 p99=6.100 fail=0 cpu=275.5% ram=8MB
+run4 Aether /json      rps=   23692 p50=1.079 p99=4.813 fail=0 cpu=281.3% ram=7MB
+run4 Actix  /json      rps=   21712 p50=0.625 p99=6.598 fail=0 cpu=240.9% ram=8MB
+
+=== SUMMARY (mean of 4 runs) ===
+Aether /plaintext rps=   24777±2056   p50=1.055ms p99=4.455ms cpu=301.0% ram=     7MB fail=0
+Actix  /plaintext rps=   27466±1571   p50=0.649ms p99=5.842ms cpu=295.8% ram=     8MB fail=0
+Aether /json      rps=   28074±4742   p50=0.948ms p99=3.941ms cpu=317.2% ram=     7MB fail=0
+Actix  /json      rps=   23320±1737   p50=0.628ms p99=6.049ms cpu=259.8% ram=     8MB fail=0

@@ -1,0 +1,47 @@
+# capture at 2026-10-19 03:25:45 local, idle machine, both Release
+
+===== /plaintext =====
+
+-- Aether (: 3101) total=162B head=149B body=13B recv_chunks=[162] close_on_idle=False
+   raw repr: b'HTTP/1.1 200 OK\r\nContent-Type: text/plain; charset=utf-8\r\nX-Request-ID: req_000000000001\r\nDate: Mon, 19 Oct 2026 00:25:45 GMT\r\nContent-Length: 13\r\n\r\nHello, World!'
+
+-- Actix (: 3103) total=130B head=117B body=13B recv_chunks=[130] close_on_idle=False
+   raw repr: b'HTTP/1.1 200 OK\r\ncontent-length: 13\r\ncontent-type: text/plain; charset=utf-8\r\ndate: Mon, 19 Oct 2026 00:25:46 GMT\r\n\r\nHello, World!'
+
+-- body equal: True
+-- status line: A=b'HTTP/1.1 200 OK\r\nContent-Type: text/plain; charset=utf-8\r\nX-Request-ID: req_000000000001\r\nDate: Mon, 19 Oct 2026 00:25:45 GMT\r\nContent-Length: 13\r\n\r\nHello, World!' Actix=b'HTTP/1.1 200 OK\r\ncontent-length: 13\r\ncontent-type: text/plain; charset=utf-8\r\ndate: Mon, 19 Oct 2026 00:25:46 GMT\r\n\r\nHello, World!'
+-- header NAMES A:     ['content-length', 'content-type', 'date', 'x-request-id']
+-- header NAMES Actix: ['content-length', 'content-type', 'date']
+-- name-set diff A-only=['x-request-id'] Actix-only=[]
+-- value diff 'date': A=['Mon, 19 Oct 2026 00:25:45 GMT'] Actix=['Mon, 19 Oct 2026 00:25:46 GMT']
+
+===== /json =====
+
+-- Aether (: 3101) total=182B head=155B body=27B recv_chunks=[182] close_on_idle=False
+   raw repr: b'HTTP/1.1 200 OK\r\nContent-Type: application/json; charset=utf-8\r\nX-Request-ID: req_000000000002\r\nDate: Mon, 19 Oct 2026 00:25:47 GMT\r\nContent-Length: 27\r\n\r\n{"message":"Hello, World!"}'
+
+-- Actix (: 3103) total=135B head=108B body=27B recv_chunks=[135] close_on_idle=False
+   raw repr: b'HTTP/1.1 200 OK\r\ncontent-length: 27\r\ncontent-type: application/json\r\ndate: Mon, 19 Oct 2026 00:25:47 GMT\r\n\r\n{"message":"Hello, World!"}'
+
+-- body equal: True
+-- status line: A=b'HTTP/1.1 200 OK\r\nContent-Type: application/json; charset=utf-8\r\nX-Request-ID: req_000000000002\r\nDate: Mon, 19 Oct 2026 00:25:47 GMT\r\nContent-Length: 27\r\n\r\n{"message":"Hello, World!"}' Actix=b'HTTP/1.1 200 OK\r\ncontent-length: 27\r\ncontent-type: application/json\r\ndate: Mon, 19 Oct 2026 00:25:47 GMT\r\n\r\n{"message":"Hello, World!"}'
+-- header NAMES A:     ['content-length', 'content-type', 'date', 'x-request-id']
+-- header NAMES Actix: ['content-length', 'content-type', 'date']
+-- name-set diff A-only=['x-request-id'] Actix-only=[]
+-- value diff 'content-type': A=['application/json; charset=utf-8'] Actix=['application/json']
+
+===== /nope-missing =====
+
+-- Aether (: 3101) total=114B head=114B body=0B recv_chunks=[114] close_on_idle=False
+   raw repr: b'HTTP/1.1 404 Not Found\r\nX-Request-ID: req_000000000003\r\nDate: Mon, 19 Oct 2026 00:25:49 GMT\r\nContent-Length: 0\r\n\r\n'
+
+-- Actix (: 3103) total=82B head=82B body=0B recv_chunks=[82] close_on_idle=False
+   raw repr: b'HTTP/1.1 404 Not Found\r\ncontent-length: 0\r\ndate: Mon, 19 Oct 2026 00:25:49 GMT\r\n\r\n'
+
+-- body equal: True
+-- status line: A=b'HTTP/1.1 404 Not Found\r\nX-Request-ID: req_000000000003\r\nDate: Mon, 19 Oct 2026 00:25:49 GMT\r\nContent-Length: 0\r\n\r\n' Actix=b'HTTP/1.1 404 Not Found\r\ncontent-length: 0\r\ndate: Mon, 19 Oct 2026 00:25:49 GMT\r\n\r\n'
+-- header NAMES A:     ['content-length', 'date', 'x-request-id']
+-- header NAMES Actix: ['content-length', 'date']
+-- name-set diff A-only=['x-request-id'] Actix-only=[]
+
+# consistency issues: none beyond listed header/value diffs

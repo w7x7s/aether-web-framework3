@@ -1,0 +1,6 @@
+{
+  "name": "Aether Web Framework",
+  "description": "Next-Generation High-Performance Native Web Framework Architecture inspired by FastAPI DX, Rust Memory Safety, and Low-Level Zero-Copy Systems Engineering.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

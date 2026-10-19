@@ -1,0 +1,17 @@
+conn= 6 procs=1 Aether rps=   36836 p50=0.148 p95=0.240 p99=0.330 fail=0
+conn= 6 procs=1 Actix  rps=   34302 p50=0.134 p95=0.242 p99=0.377 fail=0
+conn= 8 procs=1 Actix  rps=   40108 p50=0.146 p95=0.349 p99=0.798 fail=0
+conn= 8 procs=1 Aether rps=   39204 p50=0.186 p95=0.322 p99=0.450 fail=0
+conn=10 procs=1 Aether rps=   38400 p50=0.232 p95=0.454 p99=0.675 fail=0
+conn=10 procs=1 Actix  rps=   38627 p50=0.141 p95=0.523 p99=1.119 fail=0
+conn=12 procs=1 Actix  rps=   40360 p50=0.169 p95=0.598 p99=1.327 fail=0
+conn=12 procs=1 Aether rps=   39796 p50=0.276 p95=0.519 p99=0.731 fail=0
+conn=16 procs=2 Aether rps=   40031 p50=0.360 p95=0.767 p99=1.093 fail=0
+conn=16 procs=2 Actix  rps=   40443 p50=0.231 p95=1.005 p99=2.420 fail=0
+conn=16 procs=2 Actix  rps=   40113 p50=0.288 p95=0.882 p99=1.718 fail=0
+conn=16 procs=2 Aether rps=   40987 p50=0.352 p95=0.732 p99=1.005 fail=0
+conn=32 procs=4 Aether rps=   39733 p50=0.667 p95=1.894 p99=2.506 fail=0
+conn=32 procs=4 Actix  rps=   44999 p50=0.499 p95=1.556 p99=2.981 fail=0
+conn=32 procs=4 Actix  rps=   43602 p50=0.569 p95=1.473 p99=2.311 fail=0
+conn=32 procs=4 Aether rps=   42128 p50=0.616 p95=1.771 p99=2.848 fail=0
+sweep complete

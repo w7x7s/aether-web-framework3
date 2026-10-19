@@ -1,0 +1,16 @@
+[package]
+name = "aether-tests"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+aether = { path = "../aether" }
+aether-core = { path = "../core" }
+aether-http = { path = "../http" }
+aether-router = { path = "../router" }
+aether-validation = { path = "../validation" }
+tokio.workspace = true
+bytes.workspace = true
+serde.workspace = true
+serde_json = "1.0"

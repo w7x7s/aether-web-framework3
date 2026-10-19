@@ -1,0 +1,55 @@
+[workspace]
+resolver = "2"
+members = [
+    "core",
+    "http",
+    "router",
+    "runtime",
+    "middleware",
+    "validation",
+    "serialization",
+    "dependency",
+    "security",
+    "websocket",
+    "openapi",
+    "observability",
+    "scheduler",
+    "benchmarks",
+    "fuzz",
+    "examples",
+    "tests",
+    "aether",
+]
+default-members = ["examples"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+authors = ["Aether Framework Authors <engineering@aether-framework.io>"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/aether-rs/aether"
+readme = "README.md"
+
+[workspace.dependencies]
+smallvec = "1.13"
+bitflags = "2.5"
+bytes = "1.6"
+httparse = "1.9"
+serde = { version = "1.0", features = ["derive"] }
+sonic-rs = "0.3"
+tokio = { version = "1.38", features = ["full"] }
+tracing = "0.1"
+ring = "0.17"
+flate2 = "1.0"
+brotli = "6.0"
+criterion = "0.5"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+# Handlers run in spawned tasks; unwinding lets `JoinError` turn a handler panic into a
+# 500 for that request instead of aborting every connection in the process.
+panic = "unwind"
+strip = true
+overflow-checks = false

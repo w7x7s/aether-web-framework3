@@ -1,0 +1,9 @@
+{"time": "2026-10-18T16:09:29Z", "action": "new_requirement", "id": "REQ-0001", "title": "Production-readiness hardening and measured audit"}
+{"time": "2026-10-18T16:11:53Z", "action": "map_refreshed"}
+{"time": "2026-10-18T16:11:54Z", "action": "done_and_deleted", "id": "REQ-0001", "from": "requirements"}
+{"time": "2026-10-18T16:17:47Z", "action": "new_requirement", "id": "REQ-0001", "title": "Production completeness round 2: testable lifecycle, shutdown, headers, multipart, Range, E2E"}
+{"time": "2026-10-18T16:31:26Z", "action": "new_requirement", "id": "REQ-0002", "title": "RFC 6455 WebSocket support: validated handshake, bounded driver, app.ws routes, E2E"}
+{"time": "2026-10-18T16:31:28Z", "action": "done_and_deleted", "id": "REQ-0001", "from": "requirements"}
+{"time": "2026-10-18T16:31:29Z", "action": "done_and_deleted", "id": "REQ-0002", "from": "requirements"}
+{"time": "2026-10-18T16:31:29Z", "action": "map_refreshed"}
+{"time": "2026-10-18T17:11:49Z", "action": "new_requirement", "id": "REQ-0001", "title": "Execute full Aether re-engineering mission per attached vision doc: 10 phases (audit, feature matrix, baselines, algorithm review, prototypes, implementation, security verification, binary optimization, competitive benchmarks, final audit) to bring Aether to production-ready state competing with Axum/Actix"}

@@ -1,0 +1,23 @@
+[package]
+name = "aether"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "High-performance, ergonomic Rust web framework"
+
+[dependencies]
+aether-core = { path = "../core" }
+aether-http = { path = "../http" }
+aether-router = { path = "../router" }
+aether-runtime = { path = "../runtime" }
+aether-middleware = { path = "../middleware" }
+aether-dependency = { path = "../dependency" }
+aether-scheduler = { path = "../scheduler" }
+aether-websocket = { path = "../websocket" }
+bytes.workspace = true
+tokio.workspace = true
+serde.workspace = true
+serde_json = "1.0"
+
+[features]
+default = []
